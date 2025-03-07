@@ -62,7 +62,7 @@ The project uses:
 - Click on the arrow and copy link
 - Put it in the Job tracker
 
-![alt text]((https://github.com/user-attachments/assets/0043f9bc-63e4-4aa2-9a91-5a2106beaf33)
+![alt text](https://github.com/user-attachments/assets/0043f9bc-63e4-4aa2-9a91-5a2106beaf33)
 
 
 
