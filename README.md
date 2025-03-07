@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# LinkedIn Job Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application to track job applications from LinkedIn. The application scrapes job information, stores job data, and allows users to update the status of applications.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Scrape job information from LinkedIn job URLs
+- Track job application status (Applied, Responded, Interviewing, Accepted, Rejected)
+- AI-powered job analysis to extract skills, experience level, and more
+- Organize and filter job applications
+- Set reminders and mark favorites
+- Add notes to job applications
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project consists of two main components:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend (React)
 
-### `npm test`
+- `src/JobTracker.js`: Main component for the job tracker UI
+- `src/AppSidebar.js`: Sidebar component
+- `src/JobTracker.css`: Styles for the job tracker
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend (Python)
 
-### `npm run build`
+- `src/main.py`: Handles job scraping with Selenium and BeautifulSoup
+- `src/api.py`: Flask API to handle job scraping requests
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup and Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js and npm
+- Python 3.8+
+- Chrome browser (for Selenium)
 
-### `npm run eject`
+### Frontend Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Install dependencies:
+   ```
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Start the React development server:
+   ```
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Backend Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Create a virtual environment:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-## Learn More
+2. Install Python dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Start the Flask API server:
+   ```
+   python src/api.py
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Environment Variables
 
-### Code Splitting
+Create a `.env` file in the root directory with the following variables:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+LINKEDIN_USERNAME=your_linkedin_email
+LINKEDIN_PASSWORD=your_linkedin_password
+```
 
-### Analyzing the Bundle Size
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Open the application in your browser (typically at http://localhost:3000)
+2. Enter a LinkedIn job URL in the input field
+3. Click "Add Job" to scrape the job information
+4. Track and update the status of your job applications
 
-### Making a Progressive Web App
+## Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The project uses:
+- React for the frontend
+- Flask for the API
+- Selenium and BeautifulSoup for web scraping
+- LangChain with Ollama for AI-powered job analysis
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+MIT
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

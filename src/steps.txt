@@ -1,0 +1,59 @@
+Step-by-Step Guide to Understanding Job Tracker
+
+1. Project Overview
+Job Tracker is a web application designed to track job applications, primarily from LinkedIn. It scrapes job information, stores job data, and allows users to update the status of applications. The project consists of a frontend (React) and a backend (Python with Selenium and Streamlit).
+
+2. Project Structure
+The system consists of the following main components:
+
+Frontend (React)
+File: JobTracker.js
+CSS Styles: JobTracker.css
+Purpose: Provides the user interface to enter job links, display job applications, filter/search jobs, and update their statuses.
+Backend (Python)
+File: main.py
+Purpose: Handles job scraping, automation, AI analysis, and data storage.
+Uses:
+Selenium for web scraping
+BeautifulSoup for parsing LinkedIn job pages
+Streamlit for the interactive UI
+LangChain (Ollama) for AI-powered job analysis
+LocalStorage/Pandas for storing job application data
+
+3. Workflow Execution
+A. User Interactions (Frontend)
+The user enters a LinkedIn job URL into the Job Tracker UI.
+The frontend validates the URL and sends it to the backend.
+The user can filter/search for jobs and update their status.
+B. Job Scraping (Backend - Selenium)
+The backend launches a Selenium WebDriver to open LinkedIn.
+If required, the script logs into LinkedIn using stored credentials.
+The job page is fetched, and BeautifulSoup extracts:
+Job title
+Company name
+Job description
+Location
+Date posted
+Job type
+Number of applicants
+Extracted data is cached to reduce redundant requests.
+C. AI-Powered Job Analysis (LangChain)
+The LangChain Ollama model processes job descriptions.
+It extracts:
+Required skills
+Experience level
+Key responsibilities
+Salary range
+Work mode (remote/hybrid/onsite)
+D. Data Storage & Management
+The frontend saves job application data in LocalStorage.
+The backend maintains job records in a Pandas DataFrame.
+Users can export job data to CSV for external analysis.
+E. Status Management
+Users can update a job's status:
+Applied, Responded, Interviewing, Accepted, Rejected
+Job data updates are stored locally in the browser.
+F. User Notifications & Actions
+Users can favorite jobs and set reminders.
+The frontend provides visual indicators for job statuses.
+Users can search, filter, and remove job entries.
