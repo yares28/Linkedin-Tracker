@@ -11,21 +11,6 @@ A web application to track job applications from LinkedIn. The application scrap
 - Set reminders and mark favorites
 - Add notes to job applications
 
-## Project Structure
-
-The project consists of two main components:
-
-### Frontend (React)
-
-- `src/JobTracker.js`: Main component for the job tracker UI
-- `src/AppSidebar.js`: Sidebar component
-- `src/JobTracker.css`: Styles for the job tracker
-
-### Backend (Python)
-
-- `src/main.py`: Handles job scraping with Selenium and BeautifulSoup
-- `src/api.py`: Flask API to handle job scraping requests
-
 ## Setup and Installation
 
 ### Prerequisites
@@ -44,24 +29,6 @@ The project consists of two main components:
 2. Start the React development server:
    ```
    npm start
-   ```
-
-### Backend Setup
-
-1. Create a virtual environment:
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-2. Install Python dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-3. Start the Flask API server:
-   ```
-   python src/api.py
    ```
 
 ## Environment Variables
@@ -88,9 +55,10 @@ The project uses:
 - Selenium and BeautifulSoup for web scraping
 - LangChain with Ollama for AI-powered job analysis
 
-## License
+## DEMO
 
-MIT
+![alt text](https://github.com/user-attachments/assets/081cf196-4df8-419f-9364-8957077ae2a0)
+
 
 
 
