@@ -1,6 +1,7 @@
-# LinkedIn Job Tracker
+# LinkedIn Job Tracker 
 
 A web application to track job applications from LinkedIn. The application scrapes job information, stores job data, and allows users to update the status of applications.
+**ATTENTION, APP STILL IN DEMO VERSION**
 
 ## Features
 
